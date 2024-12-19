@@ -1,0 +1,33 @@
+.bg-gradient {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #024, #000);
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .bg-gradient .g2 {
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.6), transparent 70%);
+    top: -25%;
+    left: -25%;
+  }
+  
+  .bg-gradient .bg-radial {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    pointer-events: none;
+  }
+  
+  .bg-gradient .g1,
+  .bg-gradient .g2,
+  .bg-gradient .g3 {
+    mix-blend-mode: overlay;
+  }
+  
