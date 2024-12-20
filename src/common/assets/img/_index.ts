@@ -1,7 +1,10 @@
-import imgProfile from '/imgProfile.jpg';
+import imgProfile from './imgProfile.jpg';
+import imgFlework from './imgFlexwork.png'
+import imgWhitelist from './imgWhitelist.png'
+import imgCoinLatam from './imgCoinLatam.png'
 
 
-const assets = { imgProfile: imgProfile.src, };
+const assets = { imgProfile: imgProfile.src, imgFlework: imgFlework.src, imgWhitelist: imgWhitelist.src, imgCoinLatam: imgCoinLatam.src };
 
 
 export default assets;
