@@ -5,7 +5,7 @@ import assets from "@/common/assets/img/_index";
 export const ProejectsLinks = [
   {
     name: 'Flexwork App',
-    description:"Is a platform that allows users to find remote jobs in Latin America. It is a platform that connects companies with professionals who want to work remotely or in person.",
+    description:"Is a platform that allows users to find remote jobs in Latin America. It is a platform that connects companies with professionals who want to work.",
     year: '2024',
     href: 'https://flexworklatam.pro/',
     className: 'text-[var(--text-color-linkedIn)] border-[var(--border-primary)] hover:border-[var(--border-linkedIn)] p-2 rounded-full hover:bg-gradient-to-r hover:from-white/10 hover:via-black hover:to-black/25',
