@@ -3,6 +3,7 @@ import "./project.css";
 import { ProejectsLinks } from "./data/ProjectsData";
 import Image from "next/image";
 import icons from "@/common/assets/icons/_index";
+import Link from "next/link";
 
 export const Projects = () => {
   return (
@@ -14,7 +15,7 @@ export const Projects = () => {
         <h2 className="text-[var(--text-color-secondary)]">Projects</h2>
       </div>
       <div className="flex flex-col w-full justify-around items-center mt-7 gap-3">
-        {ProejectsLinks.map((project, index) => (
+        {ProejectsLinks.map((project) => (
           <>
             <div className="flex justify-start w-full">
               <p className="text-[var(--text-color-primary)] font-normal text-sm mt-2">
@@ -22,14 +23,14 @@ export const Projects = () => {
               </p>
             </div>
             <div
-              key={index}
+              key={project.id}
               className="flex justify-between items-center  w-full "
             >
               <div className="w-[50%] h-[100px]">
                 <h3 className="text-[var(--text-color-secondary)] text-sm flex items-center ">
-                  <a
-                    href={project.href}
-                    target="_blank"
+                  <Link
+                    href={`/projects/${project.id}`}
+                   
                     rel="noopener noreferrer"
                     className="hover:underline flex items-center gap-2 "
                   >
@@ -40,7 +41,7 @@ export const Projects = () => {
                       alt="Arrow Up"
                       className="w-4 h-4"
                     />
-                  </a>
+                  </Link>
                 </h3>
                 <p className="text-[var(--text-color-primary)] font-normal text-sm mt-2">
                   {project.description}
