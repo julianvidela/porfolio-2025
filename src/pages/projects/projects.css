@@ -12,7 +12,11 @@ h1{
 
 
 
-
+.bg-orange{
+    background-color: var(--bg-background-orange);
+    border: 1px solid var(--border-oragne);
+    color: var(--text-color-orange);
+}
 
 
 
@@ -50,6 +54,11 @@ h1{
     --border-primary:#ffffff15;
   
     --border-green: rgb(0, 126, 80);
+
+    --text-color-orange: rgb(255, 60, 0);
+    --border-oragne: rgba(255, 60, 0, 0.15);
+    --bg-background-orange: rgba(255, 60, 0, 0.13);
+
      
   
   
