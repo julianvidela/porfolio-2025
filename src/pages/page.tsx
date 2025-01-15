@@ -4,7 +4,7 @@ import ProjectDetails from './projects/[id]'
 
 
 
-export const page = () => {
+const Page = () => {
   return (
     <div>
         <ProjectDetails/>
@@ -12,3 +12,5 @@ export const page = () => {
     </div>
   )
 }
+
+export default Page;
