@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import {Inter, Newsreader} from "next/font/google"
 import "./globals.css";
-import Background from "./atoms/backGround/BackGround";
+
 
 const inter = Inter({
  subsets: ["latin"],
@@ -13,7 +13,7 @@ const inter = Inter({
 const newsreader = Newsreader({
   subsets: ["latin"],
   weight: ["400","600"],
-  style: ["italic"],
+  style: ["italic","normal"],
    variable: '--font-newsreader',
   
 }); 
@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${newsreader.variable}  antialiased`}
       >
-        {/* <Background /> */}
+        
         {children}
       </body>
     </html>

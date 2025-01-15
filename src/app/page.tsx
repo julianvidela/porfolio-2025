@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import {About} from "./components/about/About";
 import { HeaderSection } from "./components/headerSection/HeaderSection";
 import { Projects } from "./components/project/Projects";
