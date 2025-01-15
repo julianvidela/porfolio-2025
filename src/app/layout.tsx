@@ -15,6 +15,8 @@ const newsreader = Newsreader({
   weight: ["400","600"],
   style: ["italic","normal"],
    variable: '--font-newsreader',
+   display: "swap",
+    adjustFontFallback: false,
   
 }); 
 
