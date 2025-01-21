@@ -1,4 +1,5 @@
 
+import Background from "./atoms/backGround/BackGround";
 import {About} from "./components/about/About";
 import { HeaderSection } from "./components/headerSection/HeaderSection";
 import { Projects } from "./components/project/Projects";
@@ -13,6 +14,7 @@ export default function Home() {
     <HeaderSection/>
     <About/>
     <Projects />
+  
       
         
 

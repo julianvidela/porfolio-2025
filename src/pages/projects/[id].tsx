@@ -45,14 +45,14 @@
 //         </div>
 //       </section>
 //       <section className="flex flex-col h-auto w-[600px] m-auto justify-start gap-5 mt-8">
-        
+
 //         <h2 className="text-[var(--text-color-secondary)] text-[20px] font-normal">{project.projectTec.front.title}</h2>
 //         <div className="h-auto]">
 //           <p className="text-[var(--text-color-primary)] font-normal text-sm">{project.projectTec.front.description}</p>
 //         </div>
 //       </section>
 //       <section className="flex flex-col h-auto w-[600px] m-auto justify-start gap-5 mt-8">
-        
+
 //         <h2 className="text-[var(--text-color-secondary)] text-[20px] font-normal">{project.projectTec.backend?.title}</h2>
 //         <div className="h-auto">
 //           <p className="text-[var(--text-color-primary)] font-normal text-sm">{project.projectTec.backend?.description}</p>
@@ -70,6 +70,7 @@ import "./projects.css";
 import "tailwindcss/tailwind.css";
 import { renderDescriptionAsList } from "@/app/helper/renderDescriptionAsList";
 import icons from "@/common/assets/icons/_index";
+import Background from "@/app/atoms/backGround/BackGround";
 
 const ProjectDetails = () => {
   const router = useRouter();
@@ -81,23 +82,9 @@ const ProjectDetails = () => {
     return <p className="">Project not found</p>;
   }
 
-  // const renderDescriptionAsList = (description : string) => {
-  //   return (
-  //     <ul className="list-disc list-inside">
-  //       {description
-  //         .trim()
-  //         .split("\n")
-  //         .map((item, index) => (
-  //           <li key={index} className="text-[var(--text-color-primary)] font-normal text-sm leading-8">
-  //             {item.replace(/^-/, "").trim()}
-  //           </li>
-  //         ))}
-  //     </ul>
-  //   );
-  // };
-
   return (
-    <section className="h-auto w-auto mb-16">
+    <section className=" relative h-auto w-auto mb-16">
+      <Background />
       <section className="flex flex-col w-[600px] m-auto justify-start mt-8">
         <div className="mt-10 flex flex-col gap-3">
           <div className="flex justify-start w-full">
@@ -108,20 +95,15 @@ const ProjectDetails = () => {
             </div>
           </div>
           <h2 className="text-[var(--text-color-secondary)] text-[20px] font-normal">
-          <a
-                    href={project.href}
-                   
-                    rel="noopener noreferrer"
-                    className="hover:underline flex items-center gap-2 "
-                  >
-                    {project.name}
+            <a
+              href={project.href}
+              rel="noopener noreferrer"
+              className="hover:underline flex items-center gap-2 "
+            >
+              {project.name}
 
-                    <img
-                      src={icons.clip}
-                      alt="Arrow Up"
-                      className="w-5 h-5"
-                    />
-                  </a>
+              <img src={icons.clip} alt="Arrow Up" className="w-5 h-5" />
+            </a>
           </h2>
           <p className="text-[var(--text-color-primary)] font-normal text-sm">
             {project.description}
@@ -136,7 +118,7 @@ const ProjectDetails = () => {
         </div>
         <div className="mb-10 mt-8">
           <p className="text-[var(--text-color-primary)] font-normal text-sm leading-6">
-            {(project.extendedDescription)}
+            {project.extendedDescription}
           </p>
         </div>
       </section>
@@ -153,7 +135,9 @@ const ProjectDetails = () => {
           {project.projectTec.backend?.title}
         </h2>
         <div className="h-auto">
-          {renderDescriptionAsList(project.projectTec.backend?.description || "")}
+          {renderDescriptionAsList(
+            project.projectTec.backend?.description || ""
+          )}
         </div>
       </section>
     </section>
@@ -161,4 +145,3 @@ const ProjectDetails = () => {
 };
 
 export default ProjectDetails;
-

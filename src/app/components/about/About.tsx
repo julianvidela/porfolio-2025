@@ -1,9 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
-import { Tags } from '../headerSection/components/SocialMedia/Tags'
+import "./about.css"
 
 export const About = () => {
   return (
+    <>
+    
     <div className='flex flex-col items-start'>
     <div className='font-normal text-sm mt-5'>
         <h2 className='text-[var(--text-color-secondary)]'>About</h2>
@@ -17,7 +19,8 @@ export const About = () => {
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa quibusdam saepe possimus eaque cum autem deleniti laudantium facilis minus!
         </p>
     </div>
-    <Tags/>
+  
     </div>
+  </>
   )
 }

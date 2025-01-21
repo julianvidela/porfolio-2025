@@ -1,16 +1,18 @@
-import React from 'react'
-import ProjectDetails from './projects/[id]'
+
+// import React from 'react'
+// import ProjectDetails from './projects/[id]'
 
 
 
 
-const Page = () => {
-  return (
-    <div>
-        <ProjectDetails/>
 
-    </div>
-  )
-}
+// const Page = () => {
+//   return (
+//     <div>
+//         <ProjectDetails/>
+//     </div>
+//   )
+// }
 
-export default Page;
+// export default Page;
+
